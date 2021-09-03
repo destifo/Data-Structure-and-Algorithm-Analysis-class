@@ -1,6 +1,6 @@
 #for plotting graphes of functions, for big O notation and such kind of functions comparison
 
-import inline
+
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
