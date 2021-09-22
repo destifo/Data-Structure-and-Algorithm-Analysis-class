@@ -1,30 +1,34 @@
 class QueueArray:
     def __init__(self):
         self.lst = list()
-        self.back = 0
-        self.front = 0
+        self.back = -1
+        self.front = -1
 
     def isEmpty(self):
         if self.back == self.front:
             return True
-        return True
+        return False
 
     def enqueue(self, key):
         self.lst.append(key)
-        self.back +=1
+        self.back += 1
 
-    def dequeue(self, key):
-        if isEmpty():
+    def dequeue(self):
+        if self.isEmpty():
             return "Empty list!"
-        self.lst.pop(self.front)
+        self.lst[self.front] = None
         self.front += 1
 
     def size(self):
-        if isEmpty():
+        if self.isEmpty():
             return 0
         return abs(self.front - self.back)
 
     def front(self):
-        if isEmpty():
+        if self.isEmpty():
             return "Empty list!"
         return self.lst[self.front]
+
+    def top(self):
+        if self.isEmpty(): return "Empty Queue"
+        return self.lst[self.back]
